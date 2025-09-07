@@ -94,6 +94,7 @@ int main() {
     printf("Quantidade de pontos turísticos: %d\n", turismo);
     printf("Densidade: %.2f pessoas/m²\n", densidade);
     printf("PIB per capita: %.2f reais\n", pib_per_capita);
+    
     //CALCULANDO O SUPER PODER
     float superPoder;
     superPoder = populacao + area + pib + turismo + densidade + pib_per_capita;
@@ -111,6 +112,7 @@ int main() {
     printf("Quantidade de pontos turísticos: %d\n", turismo2);
     printf("Densidade: %.2f pessoas/m²\n", densidade2);
     printf("PIB per capita: %.2f reais\n", pib_per_capita2);
+
     //CALCULANDO O SUPER PODER
     float superPoder2;
     superPoder2 = populacao2 + area2 + pib2 + turismo2 + densidade2 + pib_per_capita2;
@@ -118,68 +120,196 @@ int main() {
 
     //COMPARAÇÃO DOS ATRIBUTOS DAS CARTAS
 
-    printf("Quesito População:\n");
-    if (populacao > populacao2) {
-        printf("A carta 1 é a vencedora!\n");
-    } else if (populacao < populacao2) {
-        printf("A carta 2 é a vencedora!\n");
-    } else {
-        printf("As cartas estão empatadas!\n");
-    }   
+    int atributo1, atributo2;
+    float resultado1, resultado2;
 
-    printf("Quesito Área:\n");
-    if (area > area2) {
-        printf("A carta 1 é a vencedora!\n");
-    } else if (area < area2) {
-        printf("A carta 2 é a vencedora!\n");
-    } else {
-        printf("As cartas estão empatadas!\n");
+    printf("Escolha o primeiro atributo para comparar (1-7):\n");
+    printf("1. População\n");
+    printf("2. Área\n");
+    printf("3. PIB\n");
+    printf("4. Pontos Turísticos\n");
+    printf("5. Densidade\n");
+    printf("6. PIB per capita\n");
+    printf("7. Super Poder\n");
+    scanf("%d", &atributo1);
+
+    printf("Escolha o segundo atributo para comparar (1-7):\n");
+    printf("1. População\n");
+    printf("2. Área\n");
+    printf("3. PIB\n");
+    printf("4. Pontos Turísticos\n");
+    printf("5. Densidade\n");
+    printf("6. PIB per capita\n");
+    printf("7. Super Poder\n");
+    scanf("%d", &atributo2);
+
+    switch (atributo1)
+
+    {
+    case 1: // População
+        if (populacao > populacao2) {
+            printf("A carta 1 (%s) é a vencedora do primeiro atributo!\n", nome);
+        } else if (populacao < populacao2) {
+            printf("A carta 2 (%s) é a vencedora do primeiro atributo!\n", nome2);
+        } else {
+            printf("As cartas estão empatadas no primeiro atributo!\n");
+        }
+        resultado1 = populacao;
+        resultado2 = populacao2;
+        break;
+    case 2: // Área
+        if (area > area2) {
+            printf("A carta 1 (%s) é a vencedora do primeiro atributo!\n", nome);
+        } else if (area < area2) {
+            printf("A carta 2 (%s) é a vencedora do primeiro atributo!\n", nome2);
+        } else {
+            printf("As cartas estão empatadas no primeiro atributo!\n");
+        }
+        resultado1 = area;
+        resultado2 = area2;
+        break;
+    case 3: // PIB
+        if (pib > pib2) {
+            printf("A carta 1 (%s) é a vencedora do primeiro atributo!\n", nome);
+        } else if (pib < pib2) {
+            printf("A carta 2 (%s) é a vencedora do primeiro atributo!\n", nome2);
+        } else {
+            printf("As cartas estão empatadas no primeiro atributo!\n");
+        }
+        resultado1 = pib;
+        resultado2 = pib2;
+        break;
+    case 4: // Pontos Turísticos
+        if (turismo > turismo2) {
+            printf("A carta 1 (%s) é a vencedora do primeiro atributo!\n", nome);
+        } else if (turismo < turismo2) {
+            printf("A carta 2 (%s) é a vencedora do primeiro atributo!\n", nome2);
+        } else {
+            printf("As cartas estão empatadas no primeiro atributo!\n");
+        }
+        resultado1 = turismo;
+        resultado2 = turismo2;
+        break;
+    case 5: // Densidade
+        if (densidade > densidade2) {
+            printf("A carta 1 (%s) é a vencedora do primeiro atributo!\n", nome);
+        } else if (densidade < densidade2) {
+            printf("A carta 2 (%s) é a vencedora do primeiro atributo!\n", nome2);
+        } else {
+            printf("As cartas estão empatadas no primeiro atributo!\n");
+        }
+        resultado1 = densidade;
+        resultado2 = densidade2;
+        break;
+    case 6: // PIB per capita
+        if (pib_per_capita > pib_per_capita2) {
+            printf("A carta 1 (%s) é a vencedora do primeiro atributo!\n", nome);
+        } else if (pib_per_capita < pib_per_capita2) {
+            printf("A carta 2 (%s) é a vencedora do primeiro atributo!\n", nome2);
+        } else {
+            printf("As cartas estão empatadas no primeiro atributo!\n");
+        }
+        resultado1 = pib_per_capita;
+        resultado2 = pib_per_capita2;
+        break;
+    case 7: // Super Poder
+        if (superPoder > superPoder2) {
+            printf("A carta 1 (%s) é a vencedora do primeiro atributo!\n", nome);
+        } else if (superPoder < superPoder2) {
+            printf("A carta 2 (%s) é a vencedora do primeiro atributo!\n", nome2);
+        } else {
+            printf("As cartas estão empatadas no primeiro atributo!\n");
+        }
+        resultado1 = superPoder;
+        resultado2 = superPoder2;
+        break;
     }
 
-    printf("Quesito PIB:\n");
-    if (pib > pib2) {
-        printf("A carta 1 é a vencedora!\n");
-    } else if (pib < pib2) {
-        printf("A carta 2 é a vencedora!\n");
-    } else {
-        printf("As cartas estão empatadas!\n");
+    switch (atributo2)
+
+    {
+    case 1: // População
+        if (populacao > populacao2) {
+            printf("A carta 1 (%s) é a vencedora do segundo atributo!\n", nome);
+        } else if (populacao < populacao2) {
+            printf("A carta 2 (%s) é a vencedora do segundo atributo!\n", nome2);
+        } else {
+            printf("As cartas estão empatadas no segundo atributo!\n");
+        }
+        resultado1 = resultado1 + populacao;
+        resultado2 = resultado2 + populacao2;
+        break;
+    case 2: // Área
+        if (area > area2) {
+            printf("A carta 1 (%s) é a vencedora do segundo atributo!\n", nome);
+        } else if (area < area2) {
+            printf("A carta 2 (%s) é a vencedora do segundo atributo!\n", nome2);
+        } else {
+            printf("As cartas estão empatadas no segundo atributo!\n");
+        }
+        resultado1 = resultado1 + area;
+        resultado2 = resultado2 + area2;
+        break;
+    case 3: // PIB
+        if (pib > pib2) {
+            printf("A carta 1 (%s) é a vencedora do segundo atributo!\n", nome);
+        } else if (pib < pib2) {
+            printf("A carta 2 (%s) é a vencedora do segundo atributo!\n", nome2);
+        } else {
+            printf("As cartas estão empatadas no segundo atributo!\n");
+        }
+        resultado1 = resultado1 + pib;
+        resultado2 = resultado2 + pib2;
+        break;
+    case 4: // Pontos Turísticos
+        if (turismo > turismo2) {
+            printf("A carta 1 (%s) é a vencedora do segundo atributo!\n", nome);
+        } else if (turismo < turismo2) {
+            printf("A carta 2 (%s) é a vencedora do segundo atributo!\n", nome2);
+        } else {
+            printf("As cartas estão empatadas no segundo atributo!\n");
+        }
+        resultado1 = resultado1 + turismo;
+        resultado2 = resultado2 + turismo2;
+        break;
+    case 5: // Densidade
+        if (densidade > densidade2) {
+            printf("A carta 1 (%s) é a vencedora do segundo atributo!\n", nome);
+        } else if (densidade < densidade2) {
+            printf("A carta 2 (%s) é a vencedora do segundo atributo!\n", nome2);
+        } else {
+            printf("As cartas estão empatadas no segundo atributo!\n");
+        }
+        resultado1 = resultado1 + densidade;
+        resultado2 = resultado2 + densidade2;
+        break;
+    case 6: // PIB per capita
+        if (pib_per_capita > pib_per_capita2) {
+            printf("A carta 1 (%s) é a vencedora do segundo atributo!\n", nome);
+        } else if (pib_per_capita < pib_per_capita2) {
+            printf("A carta 2 (%s) é a vencedora do segundo atributo!\n", nome2);
+        } else {
+            printf("As cartas estão empatadas no segundo atributo!\n");
+        }
+        resultado1 = resultado1 + pib_per_capita;
+        resultado2 = resultado2 + pib_per_capita2;
+        break;
+    case 7: // Super Poder
+        if (superPoder > superPoder2) {
+            printf("A carta 1 (%s) é a vencedora do segundo atributo!\n", nome);
+        } else if (superPoder < superPoder2) {
+            printf("A carta 2 (%s) é a vencedora do segundo atributo!\n", nome2);
+        } else {
+            printf("As cartas estão empatadas no segundo atributo!\n");
+        }
+        resultado1 = resultado1 + superPoder;
+        resultado2 = resultado2 + superPoder2;
+        break;
     }
 
-    printf("Quesito Pontos Turísticos:\n");
-    if (turismo > turismo2) {
-        printf("A carta 1 é a vencedora!\n");
-    } else if (turismo < turismo2) {
-        printf("A carta 2 é a vencedora!\n");
-    } else {
-        printf("As cartas estão empatadas!\n");
-    }
+    resultado1 > resultado2 ? printf("A carta 1 (%s) é a vencedora geral!\n", nome) /*verdadeiro*/ : 
+    (resultado1 < resultado2 ? printf("A carta 2 (%s) é a vencedora geral!\n", nome2) /*falso*/ : 
+    printf("As cartas estão empatadas na comparação geral!\n") /*falso*/);
 
-    printf("Quesito Densidade:\n");
-    if (densidade > densidade2) {
-        printf("A carta 1 é a vencedora!\n");
-    } else if (densidade < densidade2) {
-        printf("A carta 2 é a vencedora!\n");
-    } else {
-        printf("As cartas estão empatadas!\n");
-    }
-
-    printf("Quesito PIB per capita:\n");
-    if (pib_per_capita > pib_per_capita2) {
-        printf("A carta 1 é a vencedora!\n");
-    } else if (pib_per_capita < pib_per_capita2) {
-        printf("A carta 2 é a vencedora!\n");
-    } else {
-        printf("As cartas estão empatadas!\n");
-    }
-
-    printf("Quesito Super Poder:\n");
-    if (superPoder > superPoder2) {
-        printf("A carta 1 é a vencedora!\n");
-    } else if (superPoder < superPoder2) {
-        printf("A carta 2 é a vencedora!\n");
-    } else {
-        printf("As cartas estão empatadas!\n");
-    }   
-
-    return 0;
+return 0;
 }
